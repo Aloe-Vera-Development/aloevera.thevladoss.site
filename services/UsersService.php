@@ -1,6 +1,7 @@
 <?php
 
 require_once 'services/const.php';
+require_once 'models/User.php';
 require_once 'models/UserPlant.php';
 require_once 'models/PlantVariety.php';
 require_once 'models/Plant.php';
@@ -17,14 +18,23 @@ class UsersService
         return mysqli_query($link, $sql);
     }
 
-    public function signUp(string $name, string $last_name, string $email, string $login, string $password): mysqli_result|bool
+    public function signUp(string $name, string $last_name, string $email, string $login, string $password, string $photo): mysqli_result|bool
     {
-        return $this->_queryToDB("INSERT INTO `users`(`name`, `last_name`, `email`, `login`, `password`) VALUES ('$name','$last_name','$email','$login','$password')");
+        return $this->_queryToDB("INSERT INTO `users`(`name`, `last_name`, `email`, `login`, `password`, `photo`) VALUES ('$name','$last_name','$email','$login','$password','$photo')");
     }
 
-    public function signIn(string $login, string $password): bool|mysqli_result
+    public function signIn(string $login, string $password): bool|User
     {
-        return $this->_queryToDB("SELECT * FROM `users` WHERE (`login` = '$login' OR `email` = '$login') AND `password` = '$password'");
+        $res = $this->_queryToDB("SELECT * FROM `users` WHERE (`login` = '$login' OR `email` = '$login') AND `password` = '$password'");
+        if (!$res) {
+            return false;
+        } else {
+            $user = [];
+            while ($user_ = mysqli_fetch_array($res)) {
+                $user = $user_;
+            }
+            return new User(id: $user['id'], name: $user['name'], last_name: $user['last_name'], email: $user['email'], login: $user['login'], photo: $user['photo'], telegram_id: $user['telegram_id']);
+        }
     }
 
     public function getPlantType($id): PlantType|bool
