@@ -37,7 +37,7 @@
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <a class="navbar-brand" href="#"><img src="../res/aloe_vera_logo.jpg" alt="SeedCare" srcset=""></a>
+                <a class="navbar-brand" href="#"><img src="../res/bell.svg" alt="SeedCare" srcset=""></a>
 
                 <!-- <div class="navbar_collapse_disabled" id="navbarTogglerDemo"> -->
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo">

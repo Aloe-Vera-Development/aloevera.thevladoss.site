@@ -63,7 +63,7 @@
 
             <!-- Login form -->
             <form class="login_form container p-25">
-                <div class="d-inline-block align-items-center flex-column mb-3">
+                <div class="d-inline-block align-items-center flex-column mb-1">
                     <h1 class="h3 font-weight-normal" style="text-align:center;">Добро пожаловать!</h1>
                     <input type="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus
                         style="border-radius: 3rem" />
