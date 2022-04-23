@@ -28,77 +28,29 @@
 </head>
 
 <body>
+<nav class="navbar navbar-expand-lg navbar-light container bg-light rounded justify-content-between mw-100 px-lg-5" style="padding: 0 10%">
+    <a class="navbar-brand" href="#">SeedCare</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <a class="nav-link text-dark" href="#">Главная</a>
+    <a class="nav-link text-dark" href="#">Календарь</a>
+    <a class="nav-link text-dark" href="#">Настройки</a>
+    <img src="../res/bell.svg">
+
+</nav>
+
     <main>
-        <!-- Navbar -->
-        <div class="navbar_wrapper">
-            <nav class="navbar_seedcare navbar navbar-expand-lg navbar-light bg-light">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarTogglerDemo" aria-controls="navbarTogglerDemo" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <a class="navbar-brand" href="#"><img src="../res/aloe_vera_logo.jpg" alt="SeedCare" srcset=""></a>
-
-                <!-- <div class="navbar_collapse_disabled" id="navbarTogglerDemo"> -->
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo">
-                    <!-- <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Календарь</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Мои Растения</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" href="#">База Знаний</a>
-                        </li>
-                        <li>
-
-                        </li>
-                    </ul> -->
-                    <div class="input-group_wrapper" style="flex-grow:1; height:69px;">
-
-
-                        <div class="input-group" class="search_seedcare" style="justify-content:center !important;">
-                            <div class="form-outline" id="outline-form">
-                                <input id="search-input" type="search" id="form1"
-                                    class="form-control search_seedcare_form" placeholder="Поиск" />
-                            </div>
-                            <button id="search-button" type="button" class="search_seedcare_button btn btn-primary">
-                                <i class="fas fa-search"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <!-- <div class="flex_spacer"></div> -->
-                    <!-- <a href="#">
-                        <div class="profile_mini">
-
-                            Роман Лернер
-                            <img src="../res/avatar.png" alt="аватар">
-
-                        </div>
-                    </a> -->
-
-                    <a href="#" style="" id="registrationButton_navbar">
-                        <button type="button" class="navbar_button btn btn-default btn-block rounded-pill my-2">
-                            Регистрация
-                        </button>
-                    </a>
-
-                    <a href="#">
-                        <button type="button" class="navbar_button btn btn-default btn-block rounded-pill my-2">
-                            Вход
-                        </button>
-                    </a>
-                </div>
-            </nav>
-        </div>
-
-
 
     <div class="d-flex flex-column justify-content-center text-center">
         <h1 class="my-4">Регистрация</h1>
         <form class="d-flex flex-column justify-content-center container w-50">
             <div class="container">
+                <form id="uploadbanner" enctype="multipart/form-data" method="post" action="#">
+                    <input id="fileupload" name="myfile" class="mb-4" type="file" />
+                </form>
+
                 <input type="text" id="inputName" class="form-control mb-3" placeholder="Имя"
                        style="border-radius: 3rem; height: 2.2rem">
                 <input type="text" id="inputSurname" class="form-control" placeholder="Фамилия"
