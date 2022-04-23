@@ -141,7 +141,7 @@ Cal.prototype.showMonth = function(y, m) {
 window.onload = function() {
 
   // Start calendar
-  var c = new Cal("divCal");			
+  var c = new Cal("divCal");
   c.showcurr();
 
   // Bind next and previous button clicks
