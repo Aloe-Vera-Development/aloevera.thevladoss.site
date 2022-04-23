@@ -31,7 +31,7 @@
         require_once serverPath.'/services/UserService.php';
 
         if (isset($_REQUEST['password'])) {
-            $answer = (new UserService)->signIn(login: $_REQUEST['login'], password: $_REQUEST['password']);
+            $answer = (new UserService)->signIn(login: $_REQUEST['login'], password: $_REQUEST['password'], remember: $_REQUEST['remember']);
             if (!$answer) {?>
                  Короче.. мхм.... тут ашипка... попробуй другие данные плесссс
             <?php } else {

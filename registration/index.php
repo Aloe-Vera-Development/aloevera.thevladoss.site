@@ -29,6 +29,19 @@
 
 <body>
     <main>
+        <?php
+        require_once '/home/users/o/osinvladislav/domains/aloevera.thevladoss.site/services/const.php';
+        require_once serverPath.'/services/UserService.php';
+
+        if (isset($_REQUEST['password'])) {
+            $answer = (new UserService)->signUp(name: $_REQUEST['name'], last_name: $_REQUEST['last_name'], email: $_REQUEST['email'], login: $_REQUEST['login'], password: $_REQUEST['password'], photo: $_REQUEST['photo'], birthday: $_REQUEST['birthday'], city: $_REQUEST['city']);
+            if (!$answer) {?>
+                Короче.. мхм.... тут ашипка... попробуй другие данные плесссс
+            <?php } else {
+                header('Location: https://aloevera.thevladoss.site/');
+            }
+        }
+        ?>
         <!-- Navbar -->
         <div class="navbar_wrapper">
             <nav class="navbar_seedcare navbar navbar-expand-lg navbar-light bg-light">
