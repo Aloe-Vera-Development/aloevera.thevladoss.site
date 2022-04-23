@@ -28,115 +28,52 @@
 </head>
 
 <body>
-    <main>
-        <?php
-        require_once '/home/users/o/osinvladislav/domains/aloevera.thevladoss.site/services/const.php';
-        require_once serverPath.'/services/UserService.php';
+<main>
+    <?php
+    require_once '/home/users/o/osinvladislav/domains/aloevera.thevladoss.site/services/const.php';
+    require_once serverPath.'/services/UserService.php';
 
-        if (isset($_REQUEST['password'])) {
-            $answer = (new UserService)->signUp(name: $_REQUEST['name'], last_name: $_REQUEST['last_name'], email: $_REQUEST['email'], login: $_REQUEST['login'], password: $_REQUEST['password'], photo: $_REQUEST['photo'], birthday: $_REQUEST['birthday'], city: $_REQUEST['city']);
-            if (!$answer) {?>
-                Короче.. мхм.... тут ашипка... попробуй другие данные плесссс
-            <?php } else {
-                header('Location: https://aloevera.thevladoss.site/');
-            }
+    if (isset($_POST['password'])) {
+        var_dump($_POST);
+        $answer = (new UserService)->signUp(name: $_POST['name'], last_name: $_POST['last_name'], email: $_POST['email'], login: $_POST['login'], password: $_POST['password'], photo: 'https://i07.fotocdn.net/s126/00eca0d5ab54a4e1/public_pin_l/2866437764.jpg', birthday: $_POST['dateDay'].'.'.$_POST['dateMonth'].'.'.$_POST['dateYear'], city: $_POST['city']);
+        if (!$answer) {?>
+            Короче.. мхм.... тут ашипка... попробуй другие данные плесссс
+        <?php } else {
+            header('Location: https://aloevera.thevladoss.site/');
         }
-        ?>
-        <!-- Navbar -->
-        <div class="navbar_wrapper">
-            <nav class="navbar_seedcare navbar navbar-expand-lg navbar-light bg-light">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarTogglerDemo" aria-controls="navbarTogglerDemo" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <a class="navbar-brand" href="#"><img src="../res/bell.svg" alt="SeedCare" srcset=""></a>
-
-                <!-- <div class="navbar_collapse_disabled" id="navbarTogglerDemo"> -->
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo">
-                    <!-- <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Календарь</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Мои Растения</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" href="#">База Знаний</a>
-                        </li>
-                        <li>
-
-                        </li>
-                    </ul> -->
-                    <div class="input-group_wrapper" style="flex-grow:1; height:69px;">
-
-
-                        <div class="input-group" class="search_seedcare" style="justify-content:center !important;">
-                            <div class="form-outline" id="outline-form">
-                                <input id="search-input" type="search" id="form1"
-                                    class="form-control search_seedcare_form" placeholder="Поиск" />
-                            </div>
-                            <button id="search-button" type="button" class="search_seedcare_button btn btn-primary">
-                                <i class="fas fa-search"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <!-- <div class="flex_spacer"></div> -->
-                    <!-- <a href="#">
-                        <div class="profile_mini">
-
-                            Роман Лернер
-                            <img src="../res/avatar.png" alt="аватар">
-
-                        </div>
-                    </a> -->
-
-                    <a href="#" style="" id="registrationButton_navbar">
-                        <button type="button" class="navbar_button btn btn-default btn-block rounded-pill my-2">
-                            Регистрация
-                        </button>
-                    </a>
-
-                    <a href="#">
-                        <button type="button" class="navbar_button btn btn-default btn-block rounded-pill my-2">
-                            Вход
-                        </button>
-                    </a>
-                </div>
-            </nav>
-        </div>
-
+    }
+    ?>
 
 
     <div class="d-flex flex-column justify-content-center text-center">
         <h1 class="my-4">Регистрация</h1>
-        <form class="d-flex flex-column justify-content-center container w-50">
+        <form class="d-flex flex-column justify-content-center container w-50" action="index.php" method="post">
             <div class="container">
-                <input type="text" id="inputName" class="form-control mb-3" placeholder="Имя"
+                <input type="text" id="inputName" name="name" class="form-control mb-3" placeholder="Имя"
                        style="border-radius: 3rem; height: 2.2rem">
-                <input type="text" id="inputSurname" class="form-control" placeholder="Фамилия"
+                <input type="text" id="inputSurname" name="last_name" class="form-control" placeholder="Фамилия"
                        style="border-radius: 3rem; height: 2.2rem">
-                <input type="text" id="inputThirdname" class="form-control my-3" placeholder="Отчество"
-                       style="border-radius: 3rem; height: 2.2rem">
-                <input type="text" id="inputCity" class="form-control my-3" placeholder="Город проживания"
+                <input type="text" id="inputCity" name="city" class="form-control my-3" placeholder="Город проживания"
                        style="border-radius: 3rem; height: 2.2rem">
 
                 <div class="d-flex flex-column justify-content-between mt-2 mb-4">
                     Дата рождения
                     <div class="d-inline-flex">
-                        <input type="text" id="inputDate" class="form-control w-25 text-center" placeholder="День"
+                        <input type="text" id="inputDate" name="dateDay" class="form-control w-25 text-center" placeholder="День"
                                style="border-radius: 3rem; height: 2.2rem">
-                        <input type="text" id="inputMounth" class="form-control mx-3 text-center" placeholder="Месяц"
+                        <input type="text" id="inputMounth" name="dateMonth" class="form-control mx-3 text-center" placeholder="Месяц"
                                style="border-radius: 3rem; height: 2.2rem">
-                        <input type="text" id="inputYear" class="form-control w-25 text-center" placeholder="Год"
+                        <input type="text" id="inputYear" name="dateYear" class="form-control w-25 text-center" placeholder="Год"
                                style="border-radius: 3rem; height: 2.2rem">
                     </div>
                 </div>
 
 
-                <input type="email" id="inputEmail" class="form-control my-3" placeholder="Email"
+                <input type="email" id="inputEmail" name="email" class="form-control my-3" placeholder="Email"
                        style="border-radius: 3rem; height: 2.2rem">
-                <input type="password" id="inputPassword" class="form-control my-3" placeholder="Пароль"
+                <input type="text" id="inputLogin" name="login" class="form-control my-3" placeholder="Логин"
+                       style="border-radius: 3rem; height: 2.2rem">
+                <input type="password" id="inputPassword" name="password" class="form-control my-3" placeholder="Пароль"
                        style="border-radius: 3rem; height: 2.2rem">
                 <input type="password" id="inputPasswordAgain" class="form-control my-3" placeholder="Подтвердите пароль"
                        style="border-radius: 3rem; height: 2.2rem">
@@ -159,21 +96,25 @@
 
 
 
-            <button class="login_form__button btn  btn-block rounded-pill container text-light w-25 mt-1 mb-3" type="submit" style="background: #45D08D91; font-size-adjust: inherit">
+            <button class="login_form__button btn  btn-block rounded-pill container text-light mt-1 mb-3" type="submit" style="background: #45D08D91; font-size-adjust: inherit">
                 Зарегистрироваться
             </button>
 
-            <div class="d-flex container justify-content-center my-2">
-                <button class="btn btn-default mx-1 border border-1" type="button" style="border-radius: 15px; aspect-ratio:1/1; border-color: #45D08D91 !important;">
+            <div class="d-inline-block" style="margin-bottom: 16px;">
+                <button class="btn btn-default mx-1 border border-1" type="button"
+                        style="border-radius: 15px; aspect-ratio:1/1; border-color: #45D08D !important;">
                     <img src="../res/Google.svg" alt="">
                 </button>
-                <button class="btn btn-default mx-5 border border-1" type="button" style="border-radius: 15px; aspect-ratio:1/1; border-color: #45D08D91 !important;">
+                <button class="btn btn-default mx-1 border border-1" type="button"
+                        style="border-radius: 15px; aspect-ratio:1/1; border-color: #45D08D !important;">
                     <img src="../res/vk.svg" alt="">
                 </button>
-                <button class="btn btn-default mx-1 border border-1" type="button" style="border-radius: 15px; aspect-ratio:1/1; border-color: #45D08D91 !important;">
+                <button class="btn btn-default mx-1 border border-1" type="button"
+                        style="border-radius: 15px; aspect-ratio:1/1; border-color: #45D08D !important;">
                     <img src="../res/ok.svg" alt="">
                 </button>
             </div>
+
         </form>
     </div>
 
@@ -186,13 +127,13 @@
 
 
 
-    </main>
-    <footer>
-        <p>Разработано в рамках хакатона TulaHack2022</p>
-        <p>© Aloe Vera, 2022</p>
+</main>
+<footer>
+    <p>Разработано в рамках хакатона TulaHack2022</p>
+    <p>© Aloe Vera, 2022</p>
 
-    </footer>
-    <script src="../js/bootstrap.bundle.min.js"></script>
+</footer>
+<script src="../js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

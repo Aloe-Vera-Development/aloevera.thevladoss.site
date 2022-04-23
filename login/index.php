@@ -30,8 +30,8 @@
         require_once '/home/users/o/osinvladislav/domains/aloevera.thevladoss.site/services/const.php';
         require_once serverPath.'/services/UserService.php';
 
-        if (isset($_REQUEST['password'])) {
-            $answer = (new UserService)->signIn(login: $_REQUEST['login'], password: $_REQUEST['password'], remember: $_REQUEST['remember']);
+        if (isset($_POST['password'])) {
+            $answer = (new UserService)->signIn(login: $_POST['login'], password: $_POST['password'], remember: $_POST['remember']);
             if (!$answer) {?>
                  Короче.. мхм.... тут ашипка... попробуй другие данные плесссс
             <?php } else {
@@ -116,13 +116,13 @@
                 </div>
 
                 <div class="d-flex flex-column">
-                    <button class="login_form__button btn btn-default btn-block rounded-pill my-2" type="button">
+                    <button class="login_form__button btn btn-default btn-block rounded-pill my-2" type="button" onclick="regBtn()">
                         Регистрация
                     </button>
                 </div>
             </form>
 
-            <div class="d-inline-block">
+            <div class="d-inline-block", style="margin-top: 16px;">
                 <button class="btn btn-default mx-1 border border-1" type="button"
                     style="border-radius: 15px; aspect-ratio:1/1; border-color: #45D08D !important;">
                     <img src="../res/Google.svg" alt="">
@@ -149,13 +149,8 @@
     </footer>
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script>
-        function myFunction() {
-            var x = document.getElementById("inputPassword");
-            if (x.type === "password") {
-                x.type = "text";
-            } else {
-                x.type = "password";
-            }
+        function regBtn() {
+            window.location.href = "https://aloevera.thevladoss.site/registration/";
         }
     </script>
 </body>
