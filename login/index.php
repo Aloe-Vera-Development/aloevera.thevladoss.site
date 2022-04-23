@@ -35,7 +35,7 @@
             if (!$answer) {?>
                  Короче.. мхм.... тут ашипка... попробуй другие данные плесссс
             <?php } else {
-                header('Location: https://aloevera.thevladoss.site/');
+                header('Location: https://aloevera.thevladoss.site/personal_page/');
             }
         }
         ?>
