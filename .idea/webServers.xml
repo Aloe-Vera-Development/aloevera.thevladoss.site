@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="7a3e29ae-2fa3-443d-92c0-15ec07c1e371" name="aloevera" url="https://aloevera.thevladoss.site">
-        <fileTransfer host="aloevera.thevladoss.site" port="21">
+        <fileTransfer rootFolder="/domains/aloevera.thevladoss.site" host="aloevera.thevladoss.site" port="21">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
