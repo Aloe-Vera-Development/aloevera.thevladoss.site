@@ -2,12 +2,5 @@
 
 require_once 'services/UsersService.php';
 
-$res = (new UsersService)->signIn('thevladoss', 'qwerty12345');
+var_dump((new UsersService)->getMyPlants(1));
 
-if (!$res) {
-    echo 'error';
-} else {
-    while ($row = mysqli_fetch_array($res)) {
-        var_dump($row);
-    }
-}
