@@ -1,6 +1,6 @@
 <?php
 
-require_once 'services/UsersService.php';
+require_once 'services/UserService.php';
 
-var_dump((new UsersService)->signIn(login: 'thevladoss', password: 'qwerty12345'));
+var_dump($_COOKIE);
 

@@ -26,6 +26,20 @@
 
 <body>
     <main>
+        <?php
+        require_once '/home/users/o/osinvladislav/domains/aloevera.thevladoss.site/services/const.php';
+        require_once serverPath.'/services/UserService.php';
+
+        if (isset($_REQUEST['password'])) {
+            $answer = (new UserService)->signIn(login: $_REQUEST['login'], password: $_REQUEST['password'], remember: $_REQUEST['remember']);
+            if (!$answer) {?>
+                 Короче.. мхм.... тут ашипка... попробуй другие данные плесссс
+            <?php } else {
+                header('Location: https://aloevera.thevladoss.site/');
+            }
+        }
+        ?>
+
         <!-- Navbar -->
         <!-- <div class="navbar_wrapper">
             <nav class="navbar_seedcare navbar navbar-expand-lg navbar-light bg-light">
@@ -62,12 +76,12 @@
         <div class="login_content_wrapper">
 
             <!-- Login form -->
-            <form class="login_form container p-25">
-                <div class="d-inline-block align-items-center flex-column mb-1">
+            <form class="login_form container p-25" action="index.php" method="post">
+                <div class="d-inline-block align-items-center flex-column mb-3">
                     <h1 class="h3 font-weight-normal" style="text-align:center;">Добро пожаловать!</h1>
-                    <input type="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus
+                    <input type="text" id="inputEmail" class="form-control" placeholder="Логин или email" name="login" required autofocus
                         style="border-radius: 3rem" />
-                    <input type="password" id="inputPassword" class="form-control" placeholder="Пароль" required
+                    <input type="password" id="inputPassword" class="form-control" placeholder="Пароль" name="password" required
                         style="border-radius: 3rem" />
                     <!-- <label class="login_form__secondary  show_password">
                         <input type="checkbox" onclick="myFunction()" />Показать пароль
@@ -77,7 +91,7 @@
                             <div class="remember_me_inside">
                                 <div class="control-group">
                                     <label class="control control-checkbox">
-                                        <input type="checkbox" checked="checked" />
+                                        <input type="checkbox" checked="checked" name="remember"/>
                                         <div class="control_indicator"></div>
                                     </label>
                                 </div>
