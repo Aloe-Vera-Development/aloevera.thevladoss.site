@@ -1,0 +1,25 @@
+.plant-card {
+    font-family: 'Inter';
+    position:relative;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    padding: 12px;
+    margin: 8px;
+}
+
+.plant-card-container {
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media screen and (min-width: 1120px) {
+    .plant-card-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: calc(580px * 2) !important;
+        /* min-width: calc(560px * 2 + 2rem) */
+    }
+}

@@ -141,8 +141,8 @@ footer {
     color: black;
     border:none;
     font-size: 24px;
-    right:5px;
-    top: 10px;
+    right:-12px;
+    top: -3px;
 
 }
 .search_seedcare_button:hover {
