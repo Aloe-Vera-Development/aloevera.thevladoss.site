@@ -148,7 +148,7 @@
                 <img src="../res/pickles.jpeg" alt="" width="172px" height="124px" style="float:right">
                 <p style="text-transform: uppercase; color: #0000006E;
                     ">Овощи</p>
-                <h6 style="font-size:24px; margin: 1.5rem 0;"><b>Огурец</b></h6>
+                <h6 style="font-size:24px; margin-top: 1.5rem 0;"><b>Огурец</b></h6>
                 <h6>Обыкновенный</h6>
                 <p style="color: rgba(0, 0, 0, 0.7); font-size:16px; max-width: 70%;">Огурец появился в культуре
                     более 6 тысяч лет
