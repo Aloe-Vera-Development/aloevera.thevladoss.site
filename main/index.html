@@ -31,38 +31,52 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="navbar-brand" href="#">
-      <b><a style="color: #0D0D0D66">SeedCare</a></b>
+      <b><a style="color: #1A5B20">Seed</a><a style="color: #45D08D">Care</a></b>
     </div>
     <div class="flex_spacer"></div>
-
-    <div class="navbar_collapse_disabled" id="navbarTogglerDemo">
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0 w-100">
-          <li class="nav-item" >
-            <a href="https://aloevera.thevladoss.site/" style="color: #0D0D0D66">Главная</a>
-          </li>
-          <li class="nav-item">
-            <a href="https://aloevera.thevladoss.site/personal_page/" style="color: #0D0D0D66">Мои растения</a>
-          </li>
-          <li class="nav-item">
-            <a href="https://aloevera.thevladoss.site/" style="color: #0D0D0D66">Календарь</a>
-          </li>
-        </ul>
-
-        <div class="flex_spacer"></div>
-
-        <div class="d-flex justify-content-end" style="align-items: center">
-          <!--          Иконка колокольчика          -->
-          <a href="https://aloevera.thevladoss.site/">
-            <img src="../res/bell.svg" alt="" style="width:20px;height:20px;margin-right: 16px;">
-          </a>
-          <!--           Аватарка человечка         -->
-          <a href="https://aloevera.thevladoss.site/">
-            <img src="<?=$_COOKIE['photo']?>" alt="" style="width:30px;height:30px;border-radius: 50%;object-fit: cover;">
-          </a>
-        </div>
-      </div>
+    <div>
+      <button class="btn text-light rounded-pill" style="background: #45D08D91; width: 162px; height: 38px;" onclick="logBtn()">Войти</button>
+      <button class="btn text-light rounded-pill" style="background: #45D08D91; width: 162px; height: 38px;" onclick="regBtn()">Регистрация</button>
+    </div>
   </nav>
+</div>
+
+<div class="d-flex flex-column mt-5 justify-content-end">
+  <div class="d-inline-flex">
+    <div class="d-flex w-50 flex-column justify-content-center">
+      <div class="container w-50">
+        <h1 class="mb-4"><b><a style="color: #1A5B20">Seed</a><a style="color: #45D08DCC">Care</a></b></h1>
+        <h3 class="mb-2"><b>Уход за вашими растениями</b></h3>
+        <p>Превратите выращивание растений в интересное время провождение, которое будет приносить Вам истинное удовольствие</p>
+        <button class="btn btn-lg text-light" style="background: #45D08DCC; width: 12rem">Начать</button>
+      </div>
+    </div>
+
+    <div class="d-flex w-50 justify-content-start">
+      <img src="../res/woman.png" style="height: 400px;">
+    </div>
+  </div>
+
+
+  <div class="d-inline-flex">
+    <div class="d-flex w-50 flex-column justify-content-center">
+      <div class="d-flex container justify-content-center">
+      <img src="../res/child.png" class="mt-5" style="height: 400px">
+      </div>
+    </div>
+
+    <div class="d-flex w-50 flex-column justify-content-center">
+      <h1><b>Благодаря нашему сервису Вы сможете:</b></h1>
+      <p class="mt-2">Увеличить свой урожай на 37%</p>
+      <p>Уменьшить затраты на выращивание своего огорода на 40%</p>
+      <p>Каждый день радоваться своим растениям </p>
+    </div>
+  </div>
+
+
+  <div>
+
+  </div>
 </div>
 
 </body>
