@@ -42,6 +42,7 @@
     align-items:center;">
         <?php
             require_once '/home/users/o/osinvladislav/domains/aloevera.thevladoss.site/navbar.php';
+            require_once '/home/users/o/osinvladislav/domains/aloevera.thevladoss.site/services/UserService.php';
         ?>
         <!-- <div class="navbar_wrapper">
             <nav class="navbar_seedcare navbar navbar-expand-lg navbar-light bg-light">
@@ -87,39 +88,39 @@
                     <input id="search-input" type="search" id="form1" class="form-control search_seedcare_form"
                         placeholder="Найти растение" />
                 </div>
-                <button id="search-button" type="button" class="search_seedcare_button btn btn-primary">
+                <button id="search-button" type="button" class="search_seedcare_button btn btn-primary" style="margin-right: 4px;">
                     <img src="../res/search.svg" alt="" srcset=""
                         style="background-color: #45D08D; padding:9px; border-radius: 50%;">
                 </button>
             </div>
         </div>
 
-        <div style="max-width: 950px; max-height: 450px; margin: 5rem;">
-            <div class="imageGallery" style="display: block;">
-                <ul>
-                    <li class="prev" style="display:none;"><img
-                            src="http://kbrabrand.no/assets/codepen/responsiveGallery/raster-prev.png" /></li>
-                    <li class="image">
-                        <a href="#">
-                            <img src="https://srokigodnosti.ru/wp-content/uploads/2022/03/chem-polezna-morkov-kartinka.jpg" />
-                        </a>
-                    </li>
-                    <li class="image">
-                        <a href="#">
-                            <img src="https://proprikol.ru/wp-content/uploads/2020/03/kartinki-arbuzy-9.jpg" />
-                        </a>
-                    </li>
-                    <li class="image active">
-                        <a href="#">
-                            <img src="https://prorastet.ru/wp-content/uploads/2019/07/Sonia_5961.jpg" />
+<!--        <div style="max-width: 950px; max-height: 450px; margin: 5rem;">-->
+<!--            <div class="imageGallery" style="display: block;">-->
+<!--                <ul>-->
+<!--                    <li class="prev" style="display:none;"><img-->
+<!--                            src="http://kbrabrand.no/assets/codepen/responsiveGallery/raster-prev.png" /></li>-->
+<!--                    <li class="image">-->
+<!--                        <a href="#">-->
+<!--                            <img src="https://srokigodnosti.ru/wp-content/uploads/2022/03/chem-polezna-morkov-kartinka.jpg" />-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                    <li class="image">-->
+<!--                        <a href="#">-->
+<!--                            <img src="https://proprikol.ru/wp-content/uploads/2020/03/kartinki-arbuzy-9.jpg" />-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                    <li class="image active">-->
+<!--                        <a href="#">-->
+<!--                            <img src="https://prorastet.ru/wp-content/uploads/2019/07/Sonia_5961.jpg" />-->
+<!---->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--        </div>-->
 
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <div style="width: 100%; max-width: 760px; font-family:'El Messiri';">
+        <div style="width: 100%; max-width: 760px; font-family:'El Messiri'; margin-top: 48px">
             <h1 style=" font-size:90px; text-align: center; display:block;">
                 Мои Растения
             </h1>
@@ -147,91 +148,97 @@
             </div>
         </div>
         <div style="" class="plant-card-container mb-3" style="width: 100%;">
-            <div class="plant-card" style="max-width:560px; height:256px;">
-                <img src="../res/pickles.jpeg" alt="" width="172px" height="124px" style="float:right">
-                <p style="text-transform: uppercase; color: #0000006E;
-                    ">Овощи</p>
-                <h6 style="font-size:24px; margin-top: 1.5rem 0;"><b>Огурец</b></h6>
-                <div style="margin-bottom: 8px">
-                <h7>Обыкновенный</h7>
+            <?php
+            $myPlants = (new UserService())->getMyPlants(id: $_COOKIE['id']);
+            foreach ($myPlants as $myPlant){
+            ?>
+                <div class="plant-card" style="max-width:560px; height:280px;
+        border-radius: 1.5rem; padding: 16px">
+                    <img src="<?=$myPlant->plantVariety->plant->photo?>" alt="" width="172px" height="124px" style="float:right">
+                    <p style="text-transform: uppercase; color: #0000006E;
+                        "><?=$myPlant->plantVariety->plant->plantType->name?></p>
+                    <h6 style="font-size:24px; margin-top: 1.5rem 0;"><b><?=$myPlant->name?></b></h6>
+                    <div style="margin-bottom: 8px">
+                    <h7><?=$myPlant->plantVariety->name?></h7>
+                    </div>
+                    <p style="color: rgba(0, 0, 0, 0.7); font-size:16px; max-width: 70%;">Дата посадки: <?=$myPlant->datetime->format('d.m.Y');?> <br>
+                        Поливать каждые <?=((int)$myPlant->plantVariety->irrigation_period)/60?> часов, удобрять каждые <?=((int)$myPlant->plantVariety->fertilizing_period)/60?> часов
+                    </p>
+                    <a href="https://aloevera.thevladoss.site/wiki/index.php?id=<?=$myPlant->plantVariety->plant->id?>" style="align-items: self-end"><button type="button" style="outline:0px; background: rgba(69, 208, 141, 0.57);
+                            border-radius: 54px; border:1px solid rgba(69, 208, 141, 0.57); color:#FFFFFF; padding: 7px 37px;
+    ">Подробнее</button></a>
                 </div>
-                <p style="color: rgba(0, 0, 0, 0.7); font-size:16px; max-width: 70%;">Огурец появился в культуре
-                    более 6 тысяч лет
-                    назад. Родина
-                    этого вида - тропические и
-                    субтропические...</p>
-                <a href="https://aloevera.thevladoss.site/wiki/"><button type="button" style="outline:0px; background: rgba(69, 208, 141, 0.57);
-                        border-radius: 54px; border:1px solid rgba(69, 208, 141, 0.57); color:#FFFFFF; padding: 7px 37px;
-">Подробнее</button></a>
-            </div>
-            <div class="plant-card" style="width:560px; height:256px;">
-                <img src="https://prorastet.ru/wp-content/uploads/2019/07/Sonia_5961.jpg" alt="" width="172px" height="124px" style="float:right">
-                <p style="text-transform: uppercase; color: #0000006E;
-                    ">Цветы</p>
-                <h6 style="font-size:24px; margin-top: 1.5rem 0;"><b>Роза</b></h6>
-                <div style="margin-bottom: 8px">
-                    <h7>Обыкновенный</h7>
-                </div>
-                <p style="color: rgba(0, 0, 0, 0.7); font-size:16px; max-width: 70%;">Собирательное название видов и сортов представителей рода Шиповник, растущих в дикой природе. </p>
-                <a href="https://aloevera.thevladoss.site/wiki/"><button type="button" style="outline:0px; background: rgba(69, 208, 141, 0.57);
-                        border-radius: 54px; border:1px solid rgba(69, 208, 141, 0.57); color:#FFFFFF; padding: 7px 37px;
-">Подробнее</button></a>
-            </div>
-            <div class="plant-card" style="width:560px; height:256px;">
-                <img src="https://cstor.nn2.ru/blog/data/blog/2021-06/3197609_1622971351.jpg" alt="" width="172px" height="124px" style="float:right">
-                <p style="text-transform: uppercase; color: #0000006E;
-                    ">Фрукты</p>
-                <h6 style="font-size:24px; margin-top: 1.5rem 0;"><b>Манго</b></h6>
-                <div style="margin-bottom: 8px">
-                    <h7>Обыкновенный</h7>
-                </div>
-                <p style="color: rgba(0, 0, 0, 0.7); font-size:16px; max-width: 70%;">Плоды растений рода Манго семейства Анакардиевые. Вид Манго индийское имеет большое сельскохозяйственное значение.</p>
-                <a href="https://aloevera.thevladoss.site/wiki/"><button type="button" style="outline:0px; background: rgba(69, 208, 141, 0.57);
-                        border-radius: 54px; border:1px solid rgba(69, 208, 141, 0.57); color:#FFFFFF; padding: 7px 37px;
-">Подробнее</button></a>
-            </div>
-            <div class="plant-card" style="width:560px; height:256px;">
-                <img src="https://proprikol.ru/wp-content/uploads/2020/03/kartinki-arbuzy-9.jpg" alt="" width="172px" height="124px" style="float:right">
-                <p style="text-transform: uppercase; color: #0000006E;
-                    ">Ягоды</p>
-                <h6 style="font-size:24px; margin-top: 1.5rem 0;"><b>Арбуз вкусный</b></h6>
-                <div style="margin-bottom: 8px">
-                    <h7>Обыкновенный</h7>
-                </div>
-                <p style="color: rgba(0, 0, 0, 0.7); font-size:16px; max-width: 70%;">Однолетнее травянистое растение, вид рода Арбуз семейства Тыквенные. </p>
-                <a href="https://aloevera.thevladoss.site/wiki/"><button type="button" style="outline:0px; background: rgba(69, 208, 141, 0.57);
-                        border-radius: 54px; border:1px solid rgba(69, 208, 141, 0.57); color:#FFFFFF; padding: 7px 37px;
-">Подробнее</button></a>
-            </div>
-            <div class="plant-card" style="width:560px; height:256px;">
-                <img src="https://srokigodnosti.ru/wp-content/uploads/2022/03/chem-polezna-morkov-kartinka.jpg" alt="" width="172px" height="124px" style="float:right">
-                <p style="text-transform: uppercase; color: #0000006E;
-                    ">Корнеплоды</p>
-                <h6 style="font-size:24px; margin-top: 1.5rem 0;"><b>Морковь</b></h6>
-                <div style="margin-bottom: 8px">
-                    <h7>Обыкновенный</h7>
-                </div>
-                <p style="color: rgba(0, 0, 0, 0.7); font-size:16px; max-width: 70%;">Двулетнее растение, овощная культура, подвид вида морковь дикая. </p>
-                <a href="https://aloevera.thevladoss.site/wiki/"><button type="button" style="outline:0px; background: rgba(69, 208, 141, 0.57);
-                        border-radius: 54px; border:1px solid rgba(69, 208, 141, 0.57); color:#FFFFFF; padding: 7px 37px;
-">Подробнее</button></a>
-            </div>
-            <div class="plant-card" style="width:560px; height:256px;">
-                <img src="https://www.retail.ru/upload/medialibrary/392/pshenitsa_dva_kolosa_na_fone_polya.jpg" alt="" width="172px" height="124px" style="float:right">
-                <p style="text-transform: uppercase; color: #0000006E;
-                    ">Зерновые</p>
-                <h6 style="font-size:24px; margin-top: 1.5rem 0;"><b>Пшеница</b></h6>
-                <div style="margin-bottom: 8px">
-                    <h7>Обыкновенный</h7>
-                </div>
-                <p style="color: rgba(0, 0, 0, 0.7); font-size:16px; max-width: 70%;">Род травянистых, в основном однолетних, растений семейства Злаки, ведущая зерновая культура во многих странах. </p>
-                <a href="https://aloevera.thevladoss.site/wiki/"><button type="button" style="outline:0px; background: rgba(69, 208, 141, 0.57);
-                        border-radius: 54px; border:1px solid rgba(69, 208, 141, 0.57); color:#FFFFFF; padding: 7px 37px;
-">Подробнее</button></a>
-            </div>
+            <?php }?>
+<!--            <div class="plant-card" style="width:560px; height:256px;">-->
+<!--                <img src="https://prorastet.ru/wp-content/uploads/2019/07/Sonia_5961.jpg" alt="" width="172px" height="124px" style="float:right">-->
+<!--                <p style="text-transform: uppercase; color: #0000006E;-->
+<!--                    ">Цветы</p>-->
+<!--                <h6 style="font-size:24px; margin-top: 1.5rem 0;"><b>Роза</b></h6>-->
+<!--                <div style="margin-bottom: 8px">-->
+<!--                    <h7>Обыкновенный</h7>-->
+<!--                </div>-->
+<!--                <p style="color: rgba(0, 0, 0, 0.7); font-size:16px; max-width: 70%;">Собирательное название видов и сортов представителей рода Шиповник, растущих в дикой природе. </p>-->
+<!--                <a href="https://aloevera.thevladoss.site/wiki/"><button type="button" style="outline:0px; background: rgba(69, 208, 141, 0.57);-->
+<!--                        border-radius: 54px; border:1px solid rgba(69, 208, 141, 0.57); color:#FFFFFF; padding: 7px 37px;-->
+<!--">Подробнее</button></a>-->
+<!--            </div>-->
+<!--            <div class="plant-card" style="width:560px; height:256px;">-->
+<!--                <img src="https://cstor.nn2.ru/blog/data/blog/2021-06/3197609_1622971351.jpg" alt="" width="172px" height="124px" style="float:right">-->
+<!--                <p style="text-transform: uppercase; color: #0000006E;-->
+<!--                    ">Фрукты</p>-->
+<!--                <h6 style="font-size:24px; margin-top: 1.5rem 0;"><b>Манго</b></h6>-->
+<!--                <div style="margin-bottom: 8px">-->
+<!--                    <h7>Обыкновенный</h7>-->
+<!--                </div>-->
+<!--                <p style="color: rgba(0, 0, 0, 0.7); font-size:16px; max-width: 70%;">Плоды растений рода Манго семейства Анакардиевые. Вид Манго индийское имеет большое сельскохозяйственное значение.</p>-->
+<!--                <a href="https://aloevera.thevladoss.site/wiki/"><button type="button" style="outline:0px; background: rgba(69, 208, 141, 0.57);-->
+<!--                        border-radius: 54px; border:1px solid rgba(69, 208, 141, 0.57); color:#FFFFFF; padding: 7px 37px;-->
+<!--">Подробнее</button></a>-->
+<!--            </div>-->
+<!--            <div class="plant-card" style="width:560px; height:256px;">-->
+<!--                <img src="https://proprikol.ru/wp-content/uploads/2020/03/kartinki-arbuzy-9.jpg" alt="" width="172px" height="124px" style="float:right">-->
+<!--                <p style="text-transform: uppercase; color: #0000006E;-->
+<!--                    ">Ягоды</p>-->
+<!--                <h6 style="font-size:24px; margin-top: 1.5rem 0;"><b>Арбуз вкусный</b></h6>-->
+<!--                <div style="margin-bottom: 8px">-->
+<!--                    <h7>Обыкновенный</h7>-->
+<!--                </div>-->
+<!--                <p style="color: rgba(0, 0, 0, 0.7); font-size:16px; max-width: 70%;">Однолетнее травянистое растение, вид рода Арбуз семейства Тыквенные. </p>-->
+<!--                <a href="https://aloevera.thevladoss.site/wiki/"><button type="button" style="outline:0px; background: rgba(69, 208, 141, 0.57);-->
+<!--                        border-radius: 54px; border:1px solid rgba(69, 208, 141, 0.57); color:#FFFFFF; padding: 7px 37px;-->
+<!--">Подробнее</button></a>-->
+<!--            </div>-->
+<!--            <div class="plant-card" style="width:560px; height:256px;">-->
+<!--                <img src="https://srokigodnosti.ru/wp-content/uploads/2022/03/chem-polezna-morkov-kartinka.jpg" alt="" width="172px" height="124px" style="float:right">-->
+<!--                <p style="text-transform: uppercase; color: #0000006E;-->
+<!--                    ">Корнеплоды</p>-->
+<!--                <h6 style="font-size:24px; margin-top: 1.5rem 0;"><b>Морковь</b></h6>-->
+<!--                <div style="margin-bottom: 8px">-->
+<!--                    <h7>Обыкновенный</h7>-->
+<!--                </div>-->
+<!--                <p style="color: rgba(0, 0, 0, 0.7); font-size:16px; max-width: 70%;">Двулетнее растение, овощная культура, подвид вида морковь дикая. </p>-->
+<!--                <a href="https://aloevera.thevladoss.site/wiki/"><button type="button" style="outline:0px; background: rgba(69, 208, 141, 0.57);-->
+<!--                        border-radius: 54px; border:1px solid rgba(69, 208, 141, 0.57); color:#FFFFFF; padding: 7px 37px;-->
+<!--">Подробнее</button></a>-->
+<!--            </div>-->
+<!--            <div class="plant-card" style="width:560px; height:256px;">-->
+<!--                <img src="https://www.retail.ru/upload/medialibrary/392/pshenitsa_dva_kolosa_na_fone_polya.jpg" alt="" width="172px" height="124px" style="float:right">-->
+<!--                <p style="text-transform: uppercase; color: #0000006E;-->
+<!--                    ">Зерновые</p>-->
+<!--                <h6 style="font-size:24px; margin-top: 1.5rem 0;"><b>Пшеница</b></h6>-->
+<!--                <div style="margin-bottom: 8px">-->
+<!--                    <h7>Обыкновенный</h7>-->
+<!--                </div>-->
+<!--                <p style="color: rgba(0, 0, 0, 0.7); font-size:16px; max-width: 70%;">Род травянистых, в основном однолетних, растений семейства Злаки, ведущая зерновая культура во многих странах. </p>-->
+<!--                <a href="https://aloevera.thevladoss.site/wiki/"><button type="button" style="outline:0px; background: rgba(69, 208, 141, 0.57);-->
+<!--                        border-radius: 54px; border:1px solid rgba(69, 208, 141, 0.57); color:#FFFFFF; padding: 7px 37px;-->
+<!--">Подробнее</button></a>-->
+<!--            </div>-->
         </div>
 
-        <a href="#"><button type="button" class="mb-3" style="outline:0px; background: rgba(69, 208, 141, 0.57);
+        <a href="#" style="
+margin-top: 24px;
+margin-bottom: 48px;"><button type="button" class="mb-3" style="outline:0px; background: rgba(69, 208, 141, 0.57);
             padding: 0 54px;
             border-radius: 54px; border:1px solid rgba(69, 208, 141, 0.57); font-family: 'El Messiri';
 font-style: normal;
@@ -249,54 +256,55 @@ color: #FFFFFF; padding: 7px 37px;
 
     </footer>
     <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $('li.next, li.prev').click(function (e) {
+            var element = $(e.target).closest('li')
+                , direction = (element.hasClass('prev') ? 'prev' : 'next')
+                , activeImage = element.siblings('.active')
+                , goTo;
+
+            if (direction === 'prev') {
+                goTo = activeImage.prev('.image');
+            } else {
+                goTo = activeImage.next('.image');
+            }
+
+            if (!goTo.length && direction === 'prev') {
+                goTo = activeImage.siblings('.image').last();
+            } else if (!goTo.length) {
+                goTo = activeImage.siblings('.image').first();
+            }
+
+            goTo.addClass('active');
+            activeImage.removeClass('active');
+        });
+
+        setInterval(function (e) {
+            var element = $('li.prev').closest('li')
+                , direction = (element.hasClass('prev') ? 'prev' : 'next')
+                , activeImage = element.siblings('.active')
+                , goTo;
+
+
+            goTo = activeImage.prev('.image');
+
+
+            if (!goTo.length && direction === 'prev') {
+                goTo = activeImage.siblings('.image').last();
+            } else if (!goTo.length) {
+                goTo = activeImage.siblings('.image').first();
+            }
+
+            goTo.addClass('active');
+            activeImage.removeClass('active');
+        }, 8000);
+
+    </script>
 
 </body>
 
-    <script src="js/index.js"></script>
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script>
-    $('li.next, li.prev').click(function (e) {
-        var element = $(e.target).closest('li')
-            , direction = (element.hasClass('prev') ? 'prev' : 'next')
-            , activeImage = element.siblings('.active')
-            , goTo;
-
-        if (direction === 'prev') {
-            goTo = activeImage.prev('.image');
-        } else {
-            goTo = activeImage.next('.image');
-        }
-
-        if (!goTo.length && direction === 'prev') {
-            goTo = activeImage.siblings('.image').last();
-        } else if (!goTo.length) {
-            goTo = activeImage.siblings('.image').first();
-        }
-
-        goTo.addClass('active');
-        activeImage.removeClass('active');
-    });
-
-    setInterval(function (e) {
-        var element = $('li.prev').closest('li')
-            , direction = (element.hasClass('prev') ? 'prev' : 'next')
-            , activeImage = element.siblings('.active')
-            , goTo;
-
-
-        goTo = activeImage.prev('.image');
-
-
-        if (!goTo.length && direction === 'prev') {
-            goTo = activeImage.siblings('.image').last();
-        } else if (!goTo.length) {
-            goTo = activeImage.siblings('.image').first();
-        }
-
-        goTo.addClass('active');
-        activeImage.removeClass('active');
-    }, 8000);
-</script>
 </html>
