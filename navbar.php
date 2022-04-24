@@ -53,7 +53,9 @@ if (!isset($_COOKIE['login'])) {
                     <!--          Иконка колокольчика          -->
                     <img src="../res/bell.svg" alt="" style="width:20px;height:20px;margin-right: 16px;">
                     <!--           Аватарка человечка         -->
+                    <button>
                     <img src="<?=$_COOKIE['photo']?>" alt="" style="width:30px;height:30px;border-radius: 50%;object-fit: cover;">
+                    </button>
                 </div>
             </div>
     </nav>
