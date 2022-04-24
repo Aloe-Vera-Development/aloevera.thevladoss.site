@@ -40,12 +40,10 @@ class UserService
                 $user = $user_;
             }
 
-            var_dump($user);
-
             if ($user != []) {
                 setcookie('id', $user['id'], ($remember == 'on') ? time()+60*60*24*30 : 0, '/');
                 setcookie('name', $user['name'], ($remember == 'on') ? time()+60*60*24*30 : 0, '/');
-                setcookie('last_name', $user['last_name'], ($remember == 'on') ? time()+60*60*24*30 : 0);
+                setcookie('last_name', $user['last_name'], ($remember == 'on') ? time()+60*60*24*30 : 0, '/');
                 setcookie('email', $user['email'], ($remember == 'on') ? time()+60*60*24*30 : 0, '/');
                 setcookie('login', $user['login'], ($remember == 'on') ? time()+60*60*24*30 : 0, '/');
                 setcookie('photo', $user['photo'], ($remember == 'on') ? time()+60*60*24*30 : 0, '/');

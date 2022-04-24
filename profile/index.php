@@ -23,12 +23,23 @@
 
 <body>
     <main style="font-family: 'Inter'">
+        <?php
+        require_once '/home/users/o/osinvladislav/domains/aloevera.thevladoss.site/navbar.php';
+
+        require_once '/home/users/o/osinvladislav/domains/aloevera.thevladoss.site/services/UserService.php';
+
+        if (isset($_REQUEST['logout'])) {
+            $answ = (new UserService)->signOut();
+            header('Location: https://aloevera.thevladoss.site/login/');
+        }
+        ?>
+
         <div
             style="display:flex; flex-direction: column; justify-content:center; align-items:center;margin-top: 164px;">
             <div class="" style="display: flex; flex-direction: row; align-items: center">
                 <img src="../res/bgprofile.svg" alt="" style="position:absolute; z-index: -1; top: 0%; left:20%;">
 
-                <img src="../res/manlyman.jpg" alt="аватар" id="sex" style="margin-right: 2rem; border-radius:50%;" />
+                <img src="<?=$_COOKIE['photo']?>" alt="аватар" id="sex" style="margin-right: 2rem; border-radius:50%; width: 200px; height: 200px;" />
                 <div>
                     <h1 class="" style="">Профиль</h1>
                     <p>Здесь Вы можете наблюдать за своим прогрессом</p>
@@ -39,14 +50,44 @@
                     <h2 class="" style="text-align: center">Мои данные</h2>
                     <form class="login_form" style="display: flex; flex-direction: column">
                         <div class="mb-3">
-                            <label class="field_title" for="inputNickname">ФИО</label>
-                            <input type="text" id="inputNickname" class="form-control"
-                                placeholder="Романов Роман Фёдорович" style="
+                            <label class="field_title" for="inputLastname">Фамилия</label>
+                            <input type="text" id="inputLastname" class="form-control"
+                                placeholder="Романов" style="
                     border: 2px solid rgba(0, 0, 0, 0.3);
                     box-sizing: border-box;
                     border-radius: 54px;
                     height: 50px;
-                  " />
+                  " value="<?=$_COOKIE['last_name']?>"/>
+                        </div>
+                        <div class="mb-3">
+                            <label class="field_title" for="inputNickname">Имя</label>
+                            <input type="text" id="inputNickname" class="form-control"
+                                placeholder="Роман" style="
+                    border: 2px solid rgba(0, 0, 0, 0.3);
+                    box-sizing: border-box;
+                    border-radius: 54px;
+                    height: 50px;
+                  "  value="<?=$_COOKIE['name']?>"/>
+                        </div>
+                        <div class="mb-3">
+                            <label class="field_title" for="inputCity">Город</label>
+                            <input type="text" id="inputCity" class="form-control"
+                                   placeholder="Тула" style="
+                    border: 2px solid rgba(0, 0, 0, 0.3);
+                    box-sizing: border-box;
+                    border-radius: 54px;
+                    height: 50px;
+                  "  value="<?=$_COOKIE['city']?>"/>
+                        </div>
+                        <div class="mb-3">
+                            <label class="field_title" for="inputLogin">Логин</label>
+                            <input type="text" id="inputLogin" class="form-control"
+                                placeholder="roman" style="
+                    border: 2px solid rgba(0, 0, 0, 0.3);
+                    box-sizing: border-box;
+                    border-radius: 54px;
+                    height: 50px;
+                  "  value="<?=$_COOKIE['login']?>"/>
                         </div>
                         <div class="mb-3">
                             <label class="field_title" for="inputEmail">E-mail</label>
@@ -56,7 +97,7 @@
                     box-sizing: border-box;
                     border-radius: 54px;
                     height: 50px;
-                  " />
+                  "  value="<?=$_COOKIE['email']?>"/>
                         </div>
                         <!-- Rounded switch -->
                         <div style="display: flex; flex-direction: row; align-items: center" class="mb-3">
@@ -65,26 +106,6 @@
                                 <span class="slider round" style="display: block"></span>
                             </label>
                             <label>Получать уведомления</label>
-                        </div>
-                        <div class="mb-3">
-                            <label class="field_title" for="inputPassword">Пароль</label>
-                            <input type="password" id="inputPassword" class="form-control" placeholder="Смена пароля"
-                                style="
-                    border: 2px solid rgba(0, 0, 0, 0.3);
-                    box-sizing: border-box;
-                    border-radius: 54px;
-                    height: 50px;
-                  " />
-                            <label class="field_title" for="" style="
-                    font-family: 'Inter';
-                    font-style: normal;
-                    font-weight: 400;
-                    font-size: 15px;
-                    line-height: 18px;
-                  "><a href="#" style="
-                      color: #c4c4c4 !important;
-                      text-decoration-line: underline;
-                    ">Изменить пароль</a></label>
                         </div>
 
                         <div style="
@@ -106,7 +127,7 @@
                                 type="submit" style="background: #67d9a2; margin: 21px 42px">
                                 Сохранить изменения
                             </button>
-                            <label for="" style="margin-top: 1rem"><a href="#" style="color: black">Выйти из
+                            <label for="" style="margin-top: 1rem"><a href="https://aloevera.thevladoss.site/profile/index.php?logout=true" style="color: black">Выйти из
                                     аккаунта</a></label>
                         </div>
                     </form>

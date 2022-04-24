@@ -8,8 +8,8 @@ if (!isset($_COOKIE['login'])) {
                 aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="navbar-brand" href="#">
-            <b><a style="color: #1A5B20">Seed</a><a style="color: #45D08D">Care</a></b>
+        <div class="navbar-brand">
+            <b><a style="color: #1A5B20" href="/">Seed</a><a style="color: #45D08D" href="/">Care</a></b>
         </div>
         <div class="flex_spacer"></div>
         <div>
@@ -18,6 +18,14 @@ if (!isset($_COOKIE['login'])) {
         </div>
     </nav>
 </div>
+<script>
+    function regBtn() {
+        window.location.href = "https://aloevera.thevladoss.site/registration/";
+    }
+    function logBtn() {
+        window.location.href = "https://aloevera.thevladoss.site/login/";
+    }
+</script>
 <?php
 } else {
 ?>
@@ -28,8 +36,8 @@ if (!isset($_COOKIE['login'])) {
                 aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="navbar-brand" href="#">
-            <b><a style="color: #0D0D0D66">SeedCare</a></b>
+        <div class="navbar-brand">
+            <b><a style="color: #1A5B20" href="/">Seed</a><a style="color: #45D08D" href="/">Care</a></b>
         </div>
         <div class="flex_spacer"></div>
 
@@ -40,10 +48,10 @@ if (!isset($_COOKIE['login'])) {
                         <a href="https://aloevera.thevladoss.site/" style="color: #0D0D0D66">Главная</a>
                     </li>
                     <li class="nav-item">
-                        <a href="https://aloevera.thevladoss.site/personal_page/" style="color: #0D0D0D66">Мои растения</a>
+                        <a href="https://aloevera.thevladoss.site/personal_page/" style="color: #0D0D0D66">Мой огород</a>
                     </li>
                     <li class="nav-item">
-                        <a href="https://aloevera.thevladoss.site/" style="color: #0D0D0D66">Календарь</a>
+                        <a href="https://aloevera.thevladoss.site/profile/" style="color: #0D0D0D66">Профиль</a>
                     </li>
                 </ul>
 
@@ -55,7 +63,7 @@ if (!isset($_COOKIE['login'])) {
                         <img src="../res/bell.svg" alt="" style="width:20px;height:20px;margin-right: 16px;">
                     </a>
                     <!--           Аватарка человечка         -->
-                    <a href="https://aloevera.thevladoss.site/">
+                    <a href="https://aloevera.thevladoss.site/profile/">
                         <img src="<?=$_COOKIE['photo']?>" alt="" style="width:30px;height:30px;border-radius: 50%;object-fit: cover;">
                     </a>
                 </div>
