@@ -82,7 +82,7 @@
         </div> -->
         <div style="width: 20px;height: 20vh;"></div>
         <div class="input-group_wrapper" style="height:60px;">
-            <div class="input-group" class="search_seedcare" style="justify-content:center !important;">
+            <div class="search_seedcare" style="justify-content:center !important;">
                 <div class="form-outline" id="outline-form">
                     <input id="search-input" type="search" id="form1" class="form-control search_seedcare_form"
                         placeholder="Найти растение" />
@@ -119,7 +119,7 @@
             </div>
         </div>
 
-        <div style="width: 100%; max-width: 760px;font-family:'El Messiri';">
+        <div style="width: 100%; max-width: 760px; font-family:'El Messiri';">
             <h1 style=" font-size:90px; text-align: center; display:block;">
                 Мои Растения
             </h1>
@@ -128,14 +128,13 @@
             box-shadow: 5px 10px 53px -18px rgba(0, 0, 0, 0.16);
             border-radius: 97px; padding:3rem; ">
                 <h4 style=" text-align: center; width: 100%;" class="mb-3">Ближайшие задачи</h4>
-                <div style="font-family: 'Inter'; ">
+                <div style="font-family: 'Inter';">
                     <li><ul>Полить помидоры через 3 дня</ul></li>
                     <li><ul>Проверить рассаду огурцов</ul></li>
                 </div>
             </div>
             <div class="mb-3">
 
-                <body>
                     <div class="calendar-wrapper" style="border-radius: 4%; background:#FFF !important;">
                         <!--  <button id="btnPrev" type="button">Prev</button>-->
                         <!--	  <button id="btnNext" type="button">Next</button>-->
@@ -155,7 +154,7 @@
                     назад. Родина
                     этого вида - тропические и
                     субтропические...</p>
-                <a href="#"><button type="button" style="outline:0px; background: rgba(69, 208, 141, 0.57);
+                <a href="https://aloevera.thevladoss.site/wiki/"><button type="button" style="outline:0px; background: rgba(69, 208, 141, 0.57);
                         border-radius: 54px; border:1px solid rgba(69, 208, 141, 0.57); color:#FFFFFF; padding: 7px 37px;
 ">Подробнее</button></a>
             </div>
@@ -165,7 +164,7 @@
                     ">Цветы</p>
                 <h6 style="font-size:24px; margin: 1.5rem 0;"><b>Роза</b></h6>
                 <p style="color: rgba(0, 0, 0, 0.7); font-size:16px; max-width: 70%;">Собирательное название видов и сортов представителей рода Шиповник, растущих в дикой природе. </p>
-                <a href="#"><button type="button" style="outline:0px; background: rgba(69, 208, 141, 0.57);
+                <a href="https://aloevera.thevladoss.site/wiki/"><button type="button" style="outline:0px; background: rgba(69, 208, 141, 0.57);
                         border-radius: 54px; border:1px solid rgba(69, 208, 141, 0.57); color:#FFFFFF; padding: 7px 37px;
 ">Подробнее</button></a>
             </div>
@@ -175,7 +174,7 @@
                     ">Фрукты</p>
                 <h6 style="font-size:24px; margin: 1.5rem 0;"><b>Манго</b></h6>
                 <p style="color: rgba(0, 0, 0, 0.7); font-size:16px; max-width: 70%;">Плоды растений рода Манго семейства Анакардиевые. Вид Манго индийское имеет большое сельскохозяйственное значение.</p>
-                <a href="#"><button type="button" style="outline:0px; background: rgba(69, 208, 141, 0.57);
+                <a href="https://aloevera.thevladoss.site/wiki/"><button type="button" style="outline:0px; background: rgba(69, 208, 141, 0.57);
                         border-radius: 54px; border:1px solid rgba(69, 208, 141, 0.57); color:#FFFFFF; padding: 7px 37px;
 ">Подробнее</button></a>
             </div>
@@ -185,7 +184,7 @@
                     ">Ягоды</p>
                 <h6 style="font-size:24px; margin: 1.5rem 0;"><b>Арбуз вкусный</b></h6>
                 <p style="color: rgba(0, 0, 0, 0.7); font-size:16px; max-width: 70%;">Однолетнее травянистое растение, вид рода Арбуз семейства Тыквенные. </p>
-                <a href="#"><button type="button" style="outline:0px; background: rgba(69, 208, 141, 0.57);
+                <a href="https://aloevera.thevladoss.site/wiki/"><button type="button" style="outline:0px; background: rgba(69, 208, 141, 0.57);
                         border-radius: 54px; border:1px solid rgba(69, 208, 141, 0.57); color:#FFFFFF; padding: 7px 37px;
 ">Подробнее</button></a>
             </div>
@@ -195,7 +194,7 @@
                     ">Корнеплоды</p>
                 <h6 style="font-size:24px; margin: 1.5rem 0;"><b>Морковь</b></h6>
                 <p style="color: rgba(0, 0, 0, 0.7); font-size:16px; max-width: 70%;">Двулетнее растение, овощная культура, подвид вида морковь дикая. </p>
-                <a href="#"><button type="button" style="outline:0px; background: rgba(69, 208, 141, 0.57);
+                <a href="https://aloevera.thevladoss.site/wiki/"><button type="button" style="outline:0px; background: rgba(69, 208, 141, 0.57);
                         border-radius: 54px; border:1px solid rgba(69, 208, 141, 0.57); color:#FFFFFF; padding: 7px 37px;
 ">Подробнее</button></a>
             </div>
@@ -205,7 +204,7 @@
                     ">Зерновые</p>
                 <h6 style="font-size:24px; margin: 1.5rem 0;"><b>Пшеница</b></h6>
                 <p style="color: rgba(0, 0, 0, 0.7); font-size:16px; max-width: 70%;">Род травянистых, в основном однолетних, растений семейства Злаки, ведущая зерновая культура во многих странах. </p>
-                <a href="#"><button type="button" style="outline:0px; background: rgba(69, 208, 141, 0.57);
+                <a href="https://aloevera.thevladoss.site/wiki/"><button type="button" style="outline:0px; background: rgba(69, 208, 141, 0.57);
                         border-radius: 54px; border:1px solid rgba(69, 208, 141, 0.57); color:#FFFFFF; padding: 7px 37px;
 ">Подробнее</button></a>
             </div>
@@ -229,8 +228,10 @@ color: #FFFFFF; padding: 7px 37px;
 
     </footer>
     <script src="../js/bootstrap.bundle.min.js"></script>
+
 </body>
-<script src="js/index.js"></script>
+
+    <script src="js/index.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -277,5 +278,4 @@ color: #FFFFFF; padding: 7px 37px;
         activeImage.removeClass('active');
     }, 8000);
 </script>
-
 </html>

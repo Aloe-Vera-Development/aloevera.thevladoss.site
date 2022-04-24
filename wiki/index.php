@@ -24,7 +24,10 @@
 </head>
 
 <body>
-    <main style="width: 100%; display:flex; flex-direction: row; justify-content: center;">
+        <?php
+        require_once '/home/users/o/osinvladislav/domains/aloevera.thevladoss.site/navbar.php';
+        ?>
+        <main style="width: 100%; display:flex; flex-direction: row; justify-content: center;">
         <div class="article_content" style="">
             <div class="heading_block" style="margin-left: 40%;">
                 <h1>Огурец обыкновенный</h1>
