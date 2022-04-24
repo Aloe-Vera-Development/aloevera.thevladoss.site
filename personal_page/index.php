@@ -128,9 +128,12 @@
             box-shadow: 5px 10px 53px -18px rgba(0, 0, 0, 0.16);
             border-radius: 97px; padding:3rem; ">
                 <h4 style=" text-align: center; width: 100%;" class="mb-3">Ближайшие задачи</h4>
-                <div style="font-family: 'Inter';">
-                    <li><ul>Полить помидоры через 3 дня</ul></li>
-                    <li><ul>Проверить рассаду огурцов</ul></li>
+                <div class="d-flex flex-column" style="font-family: 'Inter';">
+<!--                    <li><ul>Полить помидоры через 3 дня</ul></li>-->
+<!--                    <li><ul>Проверить рассаду огурцов</ul></li>-->
+                    <a><b>·</b>    Полить помидоры через 3 дня</a>
+                    <a><b>·</b>    Проверить рассаду огурцов</a>
+                    <a><b>·</b>    Высадить помидоры</a>
                 </div>
             </div>
             <div class="mb-3">
