@@ -149,7 +149,7 @@
                 <p style="text-transform: uppercase; color: #0000006E;
                     ">Овощи</p>
                 <h6 style="font-size:24px; margin-top: 1.5rem 0;"><b>Огурец</b></h6>
-                <h6>Обыкновенный</h6>
+                <h7>Обыкновенный</h7>
                 <p style="color: rgba(0, 0, 0, 0.7); font-size:16px; max-width: 70%;">Огурец появился в культуре
                     более 6 тысяч лет
                     назад. Родина
@@ -163,7 +163,8 @@
                 <img src="https://prorastet.ru/wp-content/uploads/2019/07/Sonia_5961.jpg" alt="" width="172px" height="124px" style="float:right">
                 <p style="text-transform: uppercase; color: #0000006E;
                     ">Цветы</p>
-                <h6 style="font-size:24px; margin: 1.5rem 0;"><b>Роза</b></h6>
+                <h6 style="font-size:24px; margin-top: 1.5rem 0;"><b>Роза</b></h6>
+                <h7>Обыкновенная</h7>
                 <p style="color: rgba(0, 0, 0, 0.7); font-size:16px; max-width: 70%;">Собирательное название видов и сортов представителей рода Шиповник, растущих в дикой природе. </p>
                 <a href="https://aloevera.thevladoss.site/wiki/"><button type="button" style="outline:0px; background: rgba(69, 208, 141, 0.57);
                         border-radius: 54px; border:1px solid rgba(69, 208, 141, 0.57); color:#FFFFFF; padding: 7px 37px;
@@ -173,7 +174,8 @@
                 <img src="https://cstor.nn2.ru/blog/data/blog/2021-06/3197609_1622971351.jpg" alt="" width="172px" height="124px" style="float:right">
                 <p style="text-transform: uppercase; color: #0000006E;
                     ">Фрукты</p>
-                <h6 style="font-size:24px; margin: 1.5rem 0;"><b>Манго</b></h6>
+                <h6 style="font-size:24px; margin-top: 1.5rem 0;"><b>Манго</b></h6>
+                <h7>Обыкновенное</h7>
                 <p style="color: rgba(0, 0, 0, 0.7); font-size:16px; max-width: 70%;">Плоды растений рода Манго семейства Анакардиевые. Вид Манго индийское имеет большое сельскохозяйственное значение.</p>
                 <a href="https://aloevera.thevladoss.site/wiki/"><button type="button" style="outline:0px; background: rgba(69, 208, 141, 0.57);
                         border-radius: 54px; border:1px solid rgba(69, 208, 141, 0.57); color:#FFFFFF; padding: 7px 37px;
@@ -183,7 +185,8 @@
                 <img src="https://proprikol.ru/wp-content/uploads/2020/03/kartinki-arbuzy-9.jpg" alt="" width="172px" height="124px" style="float:right">
                 <p style="text-transform: uppercase; color: #0000006E;
                     ">Ягоды</p>
-                <h6 style="font-size:24px; margin: 1.5rem 0;"><b>Арбуз вкусный</b></h6>
+                <h6 style="font-size:24px; margin-top: 1.5rem 0;"><b>Арбуз вкусный</b></h6>
+                <h7>Обыкновенный</h7>
                 <p style="color: rgba(0, 0, 0, 0.7); font-size:16px; max-width: 70%;">Однолетнее травянистое растение, вид рода Арбуз семейства Тыквенные. </p>
                 <a href="https://aloevera.thevladoss.site/wiki/"><button type="button" style="outline:0px; background: rgba(69, 208, 141, 0.57);
                         border-radius: 54px; border:1px solid rgba(69, 208, 141, 0.57); color:#FFFFFF; padding: 7px 37px;
@@ -193,7 +196,8 @@
                 <img src="https://srokigodnosti.ru/wp-content/uploads/2022/03/chem-polezna-morkov-kartinka.jpg" alt="" width="172px" height="124px" style="float:right">
                 <p style="text-transform: uppercase; color: #0000006E;
                     ">Корнеплоды</p>
-                <h6 style="font-size:24px; margin: 1.5rem 0;"><b>Морковь</b></h6>
+                <h6 style="font-size:24px; margin-top: 1.5rem 0;"><b>Морковь</b></h6>
+                <h7>Обыкновенная</h7>
                 <p style="color: rgba(0, 0, 0, 0.7); font-size:16px; max-width: 70%;">Двулетнее растение, овощная культура, подвид вида морковь дикая. </p>
                 <a href="https://aloevera.thevladoss.site/wiki/"><button type="button" style="outline:0px; background: rgba(69, 208, 141, 0.57);
                         border-radius: 54px; border:1px solid rgba(69, 208, 141, 0.57); color:#FFFFFF; padding: 7px 37px;
@@ -203,7 +207,8 @@
                 <img src="https://www.retail.ru/upload/medialibrary/392/pshenitsa_dva_kolosa_na_fone_polya.jpg" alt="" width="172px" height="124px" style="float:right">
                 <p style="text-transform: uppercase; color: #0000006E;
                     ">Зерновые</p>
-                <h6 style="font-size:24px; margin: 1.5rem 0;"><b>Пшеница</b></h6>
+                <h6 style="font-size:24px; margin-top: 1.5rem 0;"><b>Пшеница</b></h6>
+                <h7>Обыкновенная</h7>
                 <p style="color: rgba(0, 0, 0, 0.7); font-size:16px; max-width: 70%;">Род травянистых, в основном однолетних, растений семейства Злаки, ведущая зерновая культура во многих странах. </p>
                 <a href="https://aloevera.thevladoss.site/wiki/"><button type="button" style="outline:0px; background: rgba(69, 208, 141, 0.57);
                         border-radius: 54px; border:1px solid rgba(69, 208, 141, 0.57); color:#FFFFFF; padding: 7px 37px;
