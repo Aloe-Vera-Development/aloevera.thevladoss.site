@@ -38,6 +38,7 @@
 ## Команда 
 
 SeedCare разработан командой Aloe Vera в рамках хакатона TulaHack2022
+
 Ссылка на репозиторий с ботом: https://github.com/Aloe-Vera-Development/tulahack-telegram-bot
 
 Aloe Vera - это мы:
