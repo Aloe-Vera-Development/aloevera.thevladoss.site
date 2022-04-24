@@ -152,7 +152,7 @@
                 <p style="text-transform: uppercase; color: #0000006E;
                     ">Овощи</p>
                 <h6 style="font-size:24px; margin-top: 1.5rem 0;"><b>Огурец</b></h6>
-                <div style="margin-bottom: 8px">
+                <div style="margin-bottom: ">
                 <h7>Обыкновенный</h7>
                 </div>
                 <p style="color: rgba(0, 0, 0, 0.7); font-size:16px; max-width: 70%;">Огурец появился в культуре
@@ -169,9 +169,7 @@
                 <p style="text-transform: uppercase; color: #0000006E;
                     ">Цветы</p>
                 <h6 style="font-size:24px; margin-top: 1.5rem 0;"><b>Роза</b></h6>
-                <div style="margin-bottom: 8px">
-                    <h7>Обыкновенный</h7>
-                </div>
+                <h7>Обыкновенная</h7>
                 <p style="color: rgba(0, 0, 0, 0.7); font-size:16px; max-width: 70%;">Собирательное название видов и сортов представителей рода Шиповник, растущих в дикой природе. </p>
                 <a href="https://aloevera.thevladoss.site/wiki/"><button type="button" style="outline:0px; background: rgba(69, 208, 141, 0.57);
                         border-radius: 54px; border:1px solid rgba(69, 208, 141, 0.57); color:#FFFFFF; padding: 7px 37px;
@@ -182,9 +180,7 @@
                 <p style="text-transform: uppercase; color: #0000006E;
                     ">Фрукты</p>
                 <h6 style="font-size:24px; margin-top: 1.5rem 0;"><b>Манго</b></h6>
-                <div style="margin-bottom: 8px">
-                    <h7>Обыкновенный</h7>
-                </div>
+                <h7>Обыкновенное</h7>
                 <p style="color: rgba(0, 0, 0, 0.7); font-size:16px; max-width: 70%;">Плоды растений рода Манго семейства Анакардиевые. Вид Манго индийское имеет большое сельскохозяйственное значение.</p>
                 <a href="https://aloevera.thevladoss.site/wiki/"><button type="button" style="outline:0px; background: rgba(69, 208, 141, 0.57);
                         border-radius: 54px; border:1px solid rgba(69, 208, 141, 0.57); color:#FFFFFF; padding: 7px 37px;
@@ -195,9 +191,7 @@
                 <p style="text-transform: uppercase; color: #0000006E;
                     ">Ягоды</p>
                 <h6 style="font-size:24px; margin-top: 1.5rem 0;"><b>Арбуз вкусный</b></h6>
-                <div style="margin-bottom: 8px">
-                    <h7>Обыкновенный</h7>
-                </div>
+                <h7>Обыкновенный</h7>
                 <p style="color: rgba(0, 0, 0, 0.7); font-size:16px; max-width: 70%;">Однолетнее травянистое растение, вид рода Арбуз семейства Тыквенные. </p>
                 <a href="https://aloevera.thevladoss.site/wiki/"><button type="button" style="outline:0px; background: rgba(69, 208, 141, 0.57);
                         border-radius: 54px; border:1px solid rgba(69, 208, 141, 0.57); color:#FFFFFF; padding: 7px 37px;
@@ -208,9 +202,7 @@
                 <p style="text-transform: uppercase; color: #0000006E;
                     ">Корнеплоды</p>
                 <h6 style="font-size:24px; margin-top: 1.5rem 0;"><b>Морковь</b></h6>
-                <div style="margin-bottom: 8px">
-                    <h7>Обыкновенный</h7>
-                </div>
+                <h7>Обыкновенная</h7>
                 <p style="color: rgba(0, 0, 0, 0.7); font-size:16px; max-width: 70%;">Двулетнее растение, овощная культура, подвид вида морковь дикая. </p>
                 <a href="https://aloevera.thevladoss.site/wiki/"><button type="button" style="outline:0px; background: rgba(69, 208, 141, 0.57);
                         border-radius: 54px; border:1px solid rgba(69, 208, 141, 0.57); color:#FFFFFF; padding: 7px 37px;
@@ -221,9 +213,7 @@
                 <p style="text-transform: uppercase; color: #0000006E;
                     ">Зерновые</p>
                 <h6 style="font-size:24px; margin-top: 1.5rem 0;"><b>Пшеница</b></h6>
-                <div style="margin-bottom: 8px">
-                    <h7>Обыкновенный</h7>
-                </div>
+                <h7>Обыкновенная</h7>
                 <p style="color: rgba(0, 0, 0, 0.7); font-size:16px; max-width: 70%;">Род травянистых, в основном однолетних, растений семейства Злаки, ведущая зерновая культура во многих странах. </p>
                 <a href="https://aloevera.thevladoss.site/wiki/"><button type="button" style="outline:0px; background: rgba(69, 208, 141, 0.57);
                         border-radius: 54px; border:1px solid rgba(69, 208, 141, 0.57); color:#FFFFFF; padding: 7px 37px;
