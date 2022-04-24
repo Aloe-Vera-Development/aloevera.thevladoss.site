@@ -83,7 +83,7 @@
         <div style="width: 20px;height: 20vh;"></div>
         <div class="input-group_wrapper" style="height:60px;">
             <div class="search_seedcare" style="justify-content:center !important;">
-                <div class="form-outline" id="outline-form">
+                <div class="form-outline" id="outline-form" style="width: 40rem">
                     <input id="search-input" type="search" id="form1" class="form-control search_seedcare_form"
                         placeholder="Найти растение" />
                 </div>
