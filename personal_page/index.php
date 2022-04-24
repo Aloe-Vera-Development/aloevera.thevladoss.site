@@ -40,7 +40,9 @@
     flex-direction:column;
     justify-content:center;
     align-items:center;">
-
+        <?php
+            require_once '/home/users/o/osinvladislav/domains/aloevera.thevladoss.site/navbar.php';
+        ?>
         <!-- <div class="navbar_wrapper">
             <nav class="navbar_seedcare navbar navbar-expand-lg navbar-light bg-light">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"

@@ -40,10 +40,10 @@ if (!isset($_COOKIE['login'])) {
                         <a href="https://aloevera.thevladoss.site/" style="color: #0D0D0D66">Главная</a>
                     </li>
                     <li class="nav-item">
-                        <a href="https://aloevera.thevladoss.site/" style="color: #0D0D0D66">Календарь</a>
+                        <a href="https://aloevera.thevladoss.site/personal_page/" style="color: #0D0D0D66">Мои растения</a>
                     </li>
                     <li class="nav-item">
-                        <a href="https://aloevera.thevladoss.site/" style="color: #0D0D0D66">Настройки</a>
+                        <a href="https://aloevera.thevladoss.site/" style="color: #0D0D0D66">Календарь</a>
                     </li>
                 </ul>
 
@@ -51,11 +51,13 @@ if (!isset($_COOKIE['login'])) {
 
                 <div class="d-flex justify-content-end" style="align-items: center">
                     <!--          Иконка колокольчика          -->
-                    <img src="../res/bell.svg" alt="" style="width:20px;height:20px;margin-right: 16px;">
+                    <a href="https://aloevera.thevladoss.site/">
+                        <img src="../res/bell.svg" alt="" style="width:20px;height:20px;margin-right: 16px;">
+                    </a>
                     <!--           Аватарка человечка         -->
-                    <button>
-                    <img src="<?=$_COOKIE['photo']?>" alt="" style="width:30px;height:30px;border-radius: 50%;object-fit: cover;">
-                    </button>
+                    <a href="https://aloevera.thevladoss.site/">
+                        <img src="<?=$_COOKIE['photo']?>" alt="" style="width:30px;height:30px;border-radius: 50%;object-fit: cover;">
+                    </a>
                 </div>
             </div>
     </nav>
