@@ -64,7 +64,7 @@
         </div>
 
 
-        <div class="d-flex flex-column justify-content-center container w-50 mt-5">
+        <div class="d-flex flex-column justify-content-center container w-50 mt-5" style="margin-bottom: 56px">
             <h2><b>Почему это важно?</b></h2>
             <p>Мы любуемся красотой растений в разных местах: в лесу, в парках, скверах, дома. Однако растения бывают не только красивыми, но и полезными.
                 Без растений невозможна жизнь. Ведь они образуют кислород — газ, который необходим для дыхания всем живым существам.
