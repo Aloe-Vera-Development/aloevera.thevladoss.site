@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вход</title>
+
+  <!-- Фавиконка -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../res/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../res/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../res/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../res/favicon/site.webmanifest">
+
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="../styles/bootstrap.min.css">
+  <link rel="stylesheet" href="../js/bootstrap.bundle.js">
+
+
+  <!-- CSS конкретно для этой страницы -->
+  <link rel="stylesheet" href="../styles/custom/login.css">
+  <link rel="stylesheet" href="../styles/custom/styles.css">
+</head>
+<body>
+<div class="navbar_wrapper">
+  <nav class="navbar_seedcare navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo" aria-controls="navbarTogglerDemo" aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-brand" href="#">
+      <b><a style="color: #0D0D0D66">SeedCare</a></b>
+    </div>
+    <div class="flex_spacer"></div>
+
+    <div class="navbar_collapse_disabled" id="navbarTogglerDemo">
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0 w-100">
+          <li class="nav-item" >
+            <a href="https://aloevera.thevladoss.site/" style="color: #0D0D0D66">Главная</a>
+          </li>
+          <li class="nav-item">
+            <a href="https://aloevera.thevladoss.site/personal_page/" style="color: #0D0D0D66">Мои растения</a>
+          </li>
+          <li class="nav-item">
+            <a href="https://aloevera.thevladoss.site/" style="color: #0D0D0D66">Календарь</a>
+          </li>
+        </ul>
+
+        <div class="flex_spacer"></div>
+
+        <div class="d-flex justify-content-end" style="align-items: center">
+          <!--          Иконка колокольчика          -->
+          <a href="https://aloevera.thevladoss.site/">
+            <img src="../res/bell.svg" alt="" style="width:20px;height:20px;margin-right: 16px;">
+          </a>
+          <!--           Аватарка человечка         -->
+          <a href="https://aloevera.thevladoss.site/">
+            <img src="<?=$_COOKIE['photo']?>" alt="" style="width:30px;height:30px;border-radius: 50%;object-fit: cover;">
+          </a>
+        </div>
+      </div>
+  </nav>
+</div>
+
+</body>
+</html>
