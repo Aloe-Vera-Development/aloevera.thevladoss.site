@@ -7,13 +7,13 @@
   <br>
 </h1>
 
-<h4 align="center">Веб-сервис, который помогает садоводам и любителям растений получать хороший урожай.</h4>
+<h4 align="center">Веб-сервис, который помогает садоводам и любителям растений получать хороший урожай. Доступен по <a href="https://aloevera.thevladoss.site">ссылке </a></h4>
 
 <p align="center">
   <a href="https://aloevera.thevladoss.site">Сайт</a> •
   <a href="#фичи">Фичи</a> •
   <a href="#стек">Стек</a> •
-  <a href="#автор">Команда</a>
+  <a href="#команда">Команда</a>
 </p>
 
 ![screenshot](res/demonstration.gif)
@@ -40,9 +40,9 @@
 SeedCare разработан командой Aloe Vera в рамках хакатона TulaHack2022
 
 Aloe Vera - это мы:
-> Дана Ермакова - дизайнер - kykyryza1721@mail.ru
-> Илья Тампио - старший разработчик - quakumei@gmail.com
-> Роман Лернер - менеджер - lerner.r@mail.ru
-> Владислав Осин - бекенд разработчик - osinvladislav@yandex.ru
-> Вячеслав Иванов - фронтенд разработчик - slava.a.ivanov@gmail.com
+- Дана Ермакова - дизайнер - kykyryza1721@mail.ru
+- Илья Тампио - старший разработчик - quakumei@gmail.com
+- Роман Лернер - менеджер - lerner.r@mail.ru
+- Владислав Осин - бекенд разработчик - osinvladislav@yandex.ru
+- Вячеслав Иванов - фронтенд разработчик - slava.a.ivanov@gmail.com
 
