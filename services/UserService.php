@@ -100,7 +100,7 @@ class UserService
                 $plant = $plant_;
             }
             if ($plant != []) {
-                return new Plant(name: $plant['name'], latin_name: $plant['latin_name'], plantType: $this->getPlantType($plant['type']), description: $plant['description'], photo: $plant['photo']);
+                return new Plant(id: $plant['id'], name: $plant['name'], latin_name: $plant['latin_name'], plantType: $this->getPlantType($plant['type']), description: $plant['description'], photo: $plant['photo']);
             } else {
                 return false;
             }
