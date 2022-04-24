@@ -29,7 +29,10 @@
 
 <body>
 <main>
+
     <?php
+    require_once '/home/users/o/osinvladislav/domains/aloevera.thevladoss.site/navbar.php';
+
     require_once '/home/users/o/osinvladislav/domains/aloevera.thevladoss.site/services/const.php';
     require_once serverPath.'/services/UserService.php';
 
@@ -134,6 +137,15 @@
 
 </footer>
 <script src="../js/bootstrap.bundle.min.js"></script>
+<script>
+    function regBtn() {
+        window.location.href = "https://aloevera.thevladoss.site/registration/";
+    }
+    function logBtn() {
+        window.location.href = "https://aloevera.thevladoss.site/login/";
+    }
+</script>
+
 </body>
 
 </html>

@@ -26,7 +26,10 @@
 
 <body>
     <main>
+
         <?php
+        require_once '/home/users/o/osinvladislav/domains/aloevera.thevladoss.site/navbar.php';
+
         require_once '/home/users/o/osinvladislav/domains/aloevera.thevladoss.site/services/const.php';
         require_once serverPath.'/services/UserService.php';
 
@@ -114,12 +117,6 @@
                         Войти
                     </button>
                 </div>
-
-                <div class="d-flex flex-column">
-                    <button class="login_form__button btn btn-default btn-block rounded-pill my-2" type="button" onclick="regBtn()">
-                        Регистрация
-                    </button>
-                </div>
             </form>
 
             <div class="d-inline-block", style="margin-top: 16px;">
@@ -151,6 +148,9 @@
     <script>
         function regBtn() {
             window.location.href = "https://aloevera.thevladoss.site/registration/";
+        }
+        function logBtn() {
+            window.location.href = "https://aloevera.thevladoss.site/login/";
         }
     </script>
 </body>
