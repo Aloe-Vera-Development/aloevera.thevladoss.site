@@ -59,7 +59,7 @@ if (!isset($_COOKIE['login'])) {
 
                 <div class="d-flex justify-content-end" style="align-items: center">
                     <!--          Иконка колокольчика          -->
-                    <a href="https://aloevera.thevladoss.site/">
+                    <a href="#">
                         <img src="../res/bell.svg" alt="" style="width:20px;height:20px;margin-right: 16px;">
                     </a>
                     <!--           Аватарка человечка         -->
