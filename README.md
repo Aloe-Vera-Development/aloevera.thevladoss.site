@@ -13,7 +13,8 @@
   <a href="https://aloevera.thevladoss.site">Сайт</a> •
   <a href="#фичи">Фичи</a> •
   <a href="#стек">Стек</a> •
-  <a href="#команда">Команда</a>
+  <a href="#команда">Команда</a> •
+  <a href="#архитектура решения">Архитектура</a>
 </p>
 
 ![screenshot](res/demonstration.gif)
@@ -33,6 +34,17 @@
 - [PHP 8](https://www.php.net/manual-lookup.php?pattern=releases%2F8.0%2Fen.php%2C&lang=en&scope=404quickref)
 - [Python 3](https://www.python.org/)
 - [python-telegram-bot](https://python-telegram-bot.readthedocs.io/en/stable/#)
+
+## Архитектура решения
+
+Архитектура бекенд:
+
+![image](https://user-images.githubusercontent.com/53406289/164958075-1692be7d-3a48-415c-876c-0cf53aadd7f3.png)
+
+
+База данных:
+
+![image](https://user-images.githubusercontent.com/53406289/164958054-0eca74b8-9d51-4cb1-a449-76e8e8e26cf3.png)
 
 
 ## Команда 
