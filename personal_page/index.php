@@ -43,7 +43,12 @@
         <?php
             require_once '/home/users/o/osinvladislav/domains/aloevera.thevladoss.site/navbar.php';
             require_once '/home/users/o/osinvladislav/domains/aloevera.thevladoss.site/services/UserService.php';
-        ?>
+
+            if (isset($_GET['add'])) {
+                (new UserService())->addMyPlant();
+                header('Location: https://aloevera.thevladoss.site/personal_page/index.php');
+            }
+            ?>
         <!-- <div class="navbar_wrapper">
             <nav class="navbar_seedcare navbar navbar-expand-lg navbar-light bg-light">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -152,7 +157,7 @@
             $myPlants = (new UserService())->getMyPlants(id: $_COOKIE['id']);
             foreach ($myPlants as $myPlant){
             ?>
-                <div class="plant-card" style="max-width:560px; height:280px;
+                <div class="plant-card" style="max-width:560px;
         border-radius: 1.5rem; padding: 16px">
                     <img src="<?=$myPlant->plantVariety->plant->photo?>" alt="" width="172px" height="124px" style="float:right">
                     <p style="text-transform: uppercase; color: #0000006E;
@@ -238,7 +243,7 @@
 
         <a href="#" style="
 margin-top: 24px;
-margin-bottom: 48px;"><button type="button" class="mb-3" style="outline:0px; background: rgba(69, 208, 141, 0.57);
+margin-bottom: 48px;"><button onclick="add()" type="button" class="mb-3" style="outline:0px; background: rgba(69, 208, 141, 0.57);
             padding: 0 54px;
             border-radius: 54px; border:1px solid rgba(69, 208, 141, 0.57); font-family: 'El Messiri';
 font-style: normal;
@@ -302,6 +307,10 @@ color: #FFFFFF; padding: 7px 37px;
             goTo.addClass('active');
             activeImage.removeClass('active');
         }, 8000);
+
+        function add() {
+            document.location.replace('https://aloevera.thevladoss.site/personal_page/index.php?add=true');
+        }
 
     </script>
 

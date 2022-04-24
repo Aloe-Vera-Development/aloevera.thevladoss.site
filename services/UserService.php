@@ -143,4 +143,11 @@ class UserService
             }
         }
     }
+
+    public function addMyPlant() : bool
+    {
+        $date = date('Y-m-d H:i:s');
+        $res = $this->_queryToDB("INSERT INTO `user_plants`(`user_id`, `plant_id`, `name`, `datetime`) VALUES (".$_COOKIE['id'].",'1','Мой огурец','$date')");
+        return $res;
+    }
 }
