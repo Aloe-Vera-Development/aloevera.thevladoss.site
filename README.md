@@ -39,12 +39,13 @@
 
 Архитектура бекенд:
 
-![image](https://user-images.githubusercontent.com/53406289/164958075-1692be7d-3a48-415c-876c-0cf53aadd7f3.png)
-
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/53406289/164958075-1692be7d-3a48-415c-876c-0cf53aadd7f3.png">
+</p>
 
 База данных:
 
-![image](https://user-images.githubusercontent.com/53406289/164958054-0eca74b8-9d51-4cb1-a449-76e8e8e26cf3.png)
+![картинка с базой данных](https://user-images.githubusercontent.com/53406289/164958054-0eca74b8-9d51-4cb1-a449-76e8e8e26cf3.png)
 
 
 ## Команда 
