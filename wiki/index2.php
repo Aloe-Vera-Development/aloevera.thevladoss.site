@@ -82,9 +82,10 @@
 
 
 
+            <a href="#"><button type="button" class="button_back" onclick="back()">Назад</button></a>
 
-
-    </main>
+        </div>
+        </main>
     <footer>
         <p>Разработано в рамках хакатона TulaHack2022</p>
         <p>© Aloe Vera, 2022</p>

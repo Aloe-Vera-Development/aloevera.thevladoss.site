@@ -155,6 +155,7 @@
         <div style="" class="plant-card-container mb-3" style="width: 100%;">
             <?php
             $myPlants = (new UserService())->getMyPlants(id: $_COOKIE['id']);
+            if ($myPlants != []) {
             foreach ($myPlants as $myPlant){
             ?>
                 <div class="plant-card" style="max-width:560px;
@@ -173,7 +174,7 @@
                             border-radius: 54px; border:1px solid rgba(69, 208, 141, 0.57); color:#FFFFFF; padding: 7px 37px;
     ">Подробнее</button></a>
                 </div>
-            <?php }?>
+            <?php } }?>
 <!--            <div class="plant-card" style="width:560px; height:256px;">-->
 <!--                <img src="https://prorastet.ru/wp-content/uploads/2019/07/Sonia_5961.jpg" alt="" width="172px" height="124px" style="float:right">-->
 <!--                <p style="text-transform: uppercase; color: #0000006E;-->
