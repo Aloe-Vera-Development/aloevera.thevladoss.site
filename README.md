@@ -17,7 +17,9 @@
   <a href="#архитектура решения">Архитектура</a>
 </p>
 
-![screenshot](res/demonstration.gif)
+<p align="center">
+<img src="https://user-images.githubusercontent.com/53406289/164970644-d92e2c8e-0c06-491c-8f1d-a4e63d7d33cf.png">
+</p>
 
 ## Фичи
 
