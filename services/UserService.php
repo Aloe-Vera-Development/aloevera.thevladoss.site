@@ -100,7 +100,7 @@ class UserService
                 $plant = $plant_;
             }
             if ($plant != []) {
-                return new Plant(name: $plant['name'], latin_name: $plant['latin_name'], plantType: $this->getPlantType($plant['type']), description: $plant['description'], photo: $plant['photo']);
+                return new Plant(id: $plant['id'], name: $plant['name'], latin_name: $plant['latin_name'], plantType: $this->getPlantType($plant['type']), description: $plant['description'], photo: $plant['photo']);
             } else {
                 return false;
             }
@@ -142,5 +142,12 @@ class UserService
                 return false;
             }
         }
+    }
+
+    public function addMyPlant() : bool
+    {
+        $date = date('Y-m-d H:i:s');
+        $res = $this->_queryToDB("INSERT INTO `user_plants`(`user_id`, `plant_id`, `name`, `datetime`) VALUES (".$_COOKIE['id'].",'1','Мой огурец','$date')");
+        return $res;
     }
 }
